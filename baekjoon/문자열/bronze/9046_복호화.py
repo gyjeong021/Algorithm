@@ -8,7 +8,7 @@ for i in range(num) :
     sentence = input().rstrip() # rstrip() : 오른쪽 공백 제거
     sentence = sentence.replace(" ", "") # replace : 문자(열) 변경
     for j in sentence :
-        if (j not in letter) :
+        if j not in letter :
             letter[j] = 1
         else :
             letter[j] += 1
@@ -16,9 +16,9 @@ for i in range(num) :
     # sorted : 새로운 정렬된 리스트 생성
     # lambda x:-x[1] : 튜플의 두번째 값을 가져와 내림차순 정렬
     
-    if (len(letter)==1) :
+    if len(letter)==1 :
         print(letter[0][0])
-    elif (letter[0][1]==letter[1][1]) :
+    elif letter[0][1]==letter[1][1] :
         print("?")
     else :
         print(letter[0][0])
