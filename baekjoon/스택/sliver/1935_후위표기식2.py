@@ -5,7 +5,7 @@
 n = int(input())
 
 sentence = input()
-operand = []
+operand = [0]*n
 
 for i in range(n) :
     operand[i] = int(input())
@@ -14,10 +14,10 @@ stack = []
 
 for j in sentence :
     if 'A' <= j <= 'Z' :
-        stack.append(i)
+        stack.append(operand[ord(i)-ord('A')])
     else :
-        x = stack.pop()
         y = stack.pop()
+        x = stack.pop()
 
         if j == '+' :
             stack.append(x + y)
